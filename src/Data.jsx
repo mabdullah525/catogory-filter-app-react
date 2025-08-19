@@ -1,3 +1,16 @@
+import l1 from "./images/l1.webp";
+import l2 from "./images/l2.webp";
+import l3 from "./images/l3.webp";
+import l4 from "./images/l4.webp";
+import l5 from "./images/l5.webp";
+import l6 from "./images/l6.webp";
+import l7 from "./images/l7.webp";
+import l8 from "./images/l8.webp";
+import l9 from "./images/l9.webp";
+import l10 from "./images/l10.webp";
+
+
+
 export const AllData = [
     {
         id:1,
