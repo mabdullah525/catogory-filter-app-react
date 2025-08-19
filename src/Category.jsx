@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 
 const Category = () => {
     return (
-        <div>
+        <div className='container'>
             <Navbar />
         </div>
     )
