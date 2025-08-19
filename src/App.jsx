@@ -1,8 +1,12 @@
 import React from 'react'
+import Category from './Category'
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Category />
+    </div>
   )
 }
 
