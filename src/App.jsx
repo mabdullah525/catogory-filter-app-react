@@ -4,7 +4,7 @@ import Category from './Category'
 
 const App = () => {
   return (
-    <div className='bg'>
+    <div>
       <Category />
     </div>
   )
