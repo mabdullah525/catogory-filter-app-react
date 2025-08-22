@@ -1,4 +1,4 @@
-import l1 from "./images/l1.webp";
+import l1 from "./images/l1.jpg";
 import l2 from "./images/l2.webp";
 import l3 from "./images/l3.webp";
 import l4 from "./images/l4.webp";

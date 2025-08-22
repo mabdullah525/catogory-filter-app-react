@@ -12,7 +12,7 @@ const Category = () => {
                     data.map((cur) => {
                         return (
                             <div className="card">
-                               
+                                <img src={cur.img} />
                             </div>
                         );
                     })
@@ -20,7 +20,7 @@ const Category = () => {
 
             </div>
         </div>
-        
+
     )
 }
 
