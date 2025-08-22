@@ -7,22 +7,22 @@ const Category = () => {
     return (
         <div className='app-wrapper'>
             <Navbar />
-            <div className='products'>
+            <div className="products">
                 {
                     data.map((cur) => {
                         return (
                             <div className="card">
-                                <img src={cur.img} />
-                                <div className='text'>
-                                    <p className='name'>Model : {cur.name}</p>
-                                    <p className='name'>Price : {cur.price}</p>
+                                <img src={cur.img} alt={cur.name} />
+                                <div className="text">
+                                    <p className="name">Model : {cur.name}</p>
+                                    <p className="price">Price : {cur.price}</p>
                                 </div>
                             </div>
                         );
                     })
                 }
-
             </div>
+
         </div>
 
     )
