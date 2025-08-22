@@ -7,7 +7,20 @@ const Category = () => {
     return (
         <div className='app-wrapper'>
             <Navbar />
+            <div className='products'>
+                {
+                    data.map((cur) => {
+                        return (
+                            <div className="card">
+                               
+                            </div>
+                        );
+                    })
+                }
+
+            </div>
         </div>
+        
     )
 }
 
