@@ -9,11 +9,11 @@ const Category = () => {
             <Navbar />
             <div className='category'>
                 <label>Category : </label>
-                <select>
+                <select onChange={"selectItem"} id='select'>
                     <option value="Product A to Z">Product A to Z</option>
                     <option value="Product Z to A">Product Z to A</option>
-                    <option value="Price High to Low">Product A to Z</option>
-                    <option value="Price Low to Hight">Product A to Z</option>
+                    <option value="Price High to Low">Price High to Low</option>
+                    <option value="Price Low to Hight">Price Low to High</option>
                 </select>
 
             </div>
