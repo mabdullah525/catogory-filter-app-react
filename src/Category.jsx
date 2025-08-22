@@ -7,6 +7,16 @@ const Category = () => {
     return (
         <div className='app-wrapper'>
             <Navbar />
+            <div className='category'>
+                <label>Category : </label>
+                <select>
+                    <option value="Product A to Z">Product A to Z</option>
+                    <option value="Product Z to A">Product Z to A</option>
+                    <option value="Price High to Low">Product A to Z</option>
+                    <option value="Price Low to Hight">Product A to Z</option>
+                </select>
+
+            </div>
             <div className="products">
                 {
                     data.map((cur) => {
