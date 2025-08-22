@@ -61,10 +61,10 @@ const Category = () => {
 
             <div className="products">
                 {
-                    data.map((cur) => {
+                    data.map((cur, index) => {
                         return (
-                            <div className="card">
-                                <img src={cur.img} alt={cur.name} />
+                            <div className="card" key={index}>
+                                <img src={cur.img} alt={cur.name}  />
                                 <div className="text">
                                     <p className="name">Model : {cur.name}</p>
                                     <p className="price">Price : {cur.price}</p>
