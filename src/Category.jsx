@@ -13,6 +13,10 @@ const Category = () => {
                         return (
                             <div className="card">
                                 <img src={cur.img} />
+                                <div className='text'>
+                                    <p className='name'>Model : {cur.name}</p>
+                                    <p className='name'>Price : {cur.price}</p>
+                                </div>
                             </div>
                         );
                     })
