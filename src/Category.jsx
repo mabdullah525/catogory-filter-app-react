@@ -26,13 +26,26 @@ const Category = () => {
             let nameA = a.name;
             let nameB = b.name;
 
-            if (nameA < nameB) {
+            if (nameA > nameB) {
                 return -1;
             }
 
         })
     }
+      if (inputVal === "Price High to Low") {
+        data.sort((a, b) => {
+            return b.price - a.price;
+            
 
+        })
+    }
+      if (inputVal === "Price Low to Hight") {
+        data.sort((a, b) => {
+            return a.price - b.price;
+            
+
+        })
+    }
     return (
         <div className='app-wrapper'>
             <Navbar />
