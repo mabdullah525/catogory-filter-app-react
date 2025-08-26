@@ -1,53 +1,18 @@
-import React, { useState } from 'react'
-import Navbar from './Navbar'
-import { AllData } from './Data'
+import React from "react";
+import Navbar from "./Navbar";
+import { useDispatch, useSelector } from "react-redux";
+import { sortProducts } from "./productSlice";
 
 const Category = () => {
-    const [data, setData] = useState(AllData);
-    const [inputVal, setInputVal] = useState("");
+    const dispatch = useDispatch();
+    const { sortedProducts } = useSelector((state) => state.products);
 
     const selectIteam = (e) => {
-        console.log(e.target.value);
-        setInputVal(e.target.value);
-    }
-    if (inputVal === "Product A to Z") {
-        data.sort((a, b) => {
-            let nameA = a.name;
-            let nameB = b.name;
+        dispatch(sortProducts(e.target.value));
+    };
 
-            if (nameA < nameB) {
-                return -1;
-            }
-
-        })
-    }
-      if (inputVal === "Product Z to A") {
-        data.sort((a, b) => {
-            let nameA = a.name;
-            let nameB = b.name;
-
-            if (nameA > nameB) {
-                return -1;
-            }
-
-        })
-    }
-      if (inputVal === "Price High to Low") {
-        data.sort((a, b) => {
-            return b.price - a.price;
-            
-
-        })
-    }
-      if (inputVal === "Price Low to Hight") {
-        data.sort((a, b) => {
-            return a.price - b.price;
-            
-
-        })
-    }
     return (
-        <div className='app-wrapper'>
+        <div className="app-wrapper">
             <Navbar />
             <div className="category">
                 <label htmlFor="select">Category :</label>
@@ -60,24 +25,20 @@ const Category = () => {
             </div>
 
             <div className="products">
-                {
-                    data.map((cur, index) => {
-                        return (
-                            <div className="card" key={index}>
-                                <img src={cur.img} alt={cur.name}  />
-                                <div className="text">
-                                    <p className="name">Model : {cur.name}</p>
-                                    <p className="price">Price : {cur.price}</p>
-                                </div>
+                {sortedProducts.map((cur, index) => {
+                    return (
+                        <div className="card" key={index}>
+                            <img src={cur.img} alt={cur.name} />
+                            <div className="text">
+                                <p className="name">Model : {cur.name}</p>
+                                <p className="price">Price : {cur.price}</p>
                             </div>
-                        );
-                    })
-                }
+                        </div>
+                    );
+                })}
             </div>
-
         </div>
+    );
+};
 
-    )
-}
-
-export default Category
+export default Category;
