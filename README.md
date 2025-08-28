@@ -1,12 +1,75 @@
-# React + Vite
+🛍️ Category Filter React App (Redux Toolkit)
+📌 Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ye project ek React + Redux Toolkit application hai jisme user category ke basis par products filter kar sakta hai.
+Redux ka use karke data (products) ko ek global store me rakha gaya hai jisse har component easily data use kar sakta hai.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Category wise product filter (e.g., Laptops, Clothes, Electronics).
 
-## Expanding the ESLint configuration
+Data ek hi store (Redux Store) me rakha jata hai.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Easy state management with Redux Toolkit.
+
+UI automatically update hoti hai jab data change hota hai.
+
+🛠️ Technologies Used
+
+React
+
+Redux Toolkit
+
+JavaScript (ES6+)
+
+Vite (for fast build)
+
+CSS / Tailwind (optional)
+
+⚙️ How Redux Works Here
+
+Category.jsx (Component)
+
+User button click karta hai (e.g., "Electronics").
+
+Ye ek dispatch action bhejta hai → filterByCategory().
+
+productSlice.jsx (Reducer + Actions)
+
+Reducer action ko sunti hai aur products ko filter karke new state banati hai.
+
+Store.jsx (Global Store)
+
+Saara data ek central box me hota hai (Store).
+
+Reducer state ko update karke Store me save karta hai.
+
+Project Structure
+src/
+│── assets/
+│── images/          # Product images
+│── App.jsx          # Main app component
+│── Category.jsx     # Buttons for filtering
+│── Data.jsx         # All products data
+│── productSlice.jsx # Redux Slice (Reducer + Actions)
+│── Store.jsx        # Redux Store
+│── Navbar.jsx       # Example navbar
+│── main.jsx         # ReactDOM + Provider
+
+
+
+▶️ How to Run
+
+Clone the repo:
+git clone <repo-url>
+cd Category-Filter-React
+
+Install dependencies:
+npm install
+
+Run project:
+npm run dev
+
+UI Update
+
+Jab Store me data update hota hai → React components automatically re-render hoke updated products dikhate hain.
